@@ -22,9 +22,7 @@
 
 # 📖 [VET_CLINIC] <a name="about-project"></a>
 
-> VET_CLINIC is a database containg data about animals, animals' owners, clinic employees and visits to the clinic
-
-**[your_project__name]** is a...
+**[VET_CLINIC]** is a database containg data about animals, animals' owners, clinic employees and visits to the clinic
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -147,8 +145,6 @@ Feel free to check the [issues page](https://github.com/zeff96/vet_clinic/issues
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank the Microverse community and my coding partners for the support in this project
 
