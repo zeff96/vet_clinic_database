@@ -9,3 +9,4 @@ INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) V
 INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Squirtle', TO_DATE('Apr 2nd,1993','Mon DDth YYYY'), 3, false, 12.13);
 INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Angemon', TO_DATE('Jun 12th,2005','Mon DDth YYYY'), 1, true, 45);
 INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Boarmon', TO_DATE('Jun 7th,2005','Mon DDth YYYY'), 7, true, 20.4);
+INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Blossom', TO_DATE('Oct 13th,1998','Mon DDth YYYY'), 3, true, 17);
