@@ -66,3 +66,5 @@ SELECT MIN(weight_kg) FROM animals  WHERE species = 'digimon';
 SELECT MIN(weight_kg) FROM animals WHERE species = 'pokemon';
 
 SELECT MAX(weight_kg) FROM animals WHERE species = 'digimon';
+
+SELECT MAX(weight_kg) FROM animals WHERE species = 'pokemon';
