@@ -12,7 +12,9 @@ SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
 BEGIN TRANSACTION;
 UPDATE animals
 SET species = 'undefined';
+SELECT * FROM animals;
 ROLLBACK
+SELECT * FROM animals;
 
 BEGIN TRANSACTION;
 UPDATE animals
@@ -21,11 +23,15 @@ WHERE name LIKE '%mon%';
 UPDATE animals
 SET species = 'pokemon'
 WHERE species IS NULL;
+SELECT * FROM animals;
 COMMIT;
+SELECT * FROM animals;
 
 BEGIN TRANSACTION;
 DELETE FROM animals;
+SELECT * FROM animals;
 ROLLBACK
+SELECT * FROM animals;
 
 BEGIN TRANSACTION;
 DELETE FROM animals
@@ -37,7 +43,9 @@ ROLLBACK TO SP1;
 UPDATE animals
 SET weight_kg = weight_kg * -1
 WHERE weight_kg < 0;
+SELECT * FROM animals;
 COMMIT;
+SELECT * FROM animals;
 
 SELECT COUNT(*) FROM animals;
 
