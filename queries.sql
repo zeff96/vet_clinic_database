@@ -26,3 +26,11 @@ SET species = 'pokemon'
 WHERE species IS NULL;
 
 COMMIT;
+
+BEGIN TRANSACTION;
+
+SAVEPOINT SP2;
+
+DELETE FROM animals;
+
+ROLLBACK
