@@ -54,3 +54,5 @@ WHERE weight_kg < 0;
 COMMIT;
 
 SELECT COUNT(*) FROM animals;
+
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
