@@ -14,3 +14,15 @@ SAVEPOINT SP1;
 UPDATE animals
 SET species = 'undefined';
 ROLLBACK TO SP1;
+
+BEGIN TRANSACTION;
+
+UPDATE animals
+SET species = 'digimon'
+WHERE name LIKE '%mon%';
+
+UPDATE animals
+SET species = 'pokemon'
+WHERE species IS NULL;
+
+COMMIT;
