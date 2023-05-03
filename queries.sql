@@ -88,3 +88,9 @@ ON animals.species_id = species.id
 INNER JOIN owners 
 ON animals.owner_id = owners.id
 WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
+
+SELECT animals.name, animals.escape_attempts
+FROM animals
+INNER JOIN owners
+ON animals.owner_id = owners.id
+WHERE animals.escape_attempts < 0 AND owners.full_name = 'Dean Winchester';
