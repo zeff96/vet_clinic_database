@@ -18,6 +18,9 @@ ALTER TABLE animals
 ADD species_id INT,
 ADD CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id);
 
+ALTER TABLE animals
+ADD owner_id INT,
+ADD CONSTRAINT fk_owners FOREIGN KEY(owner_id) REFERENCES owners(id);
 
 CREATE TABLE owners(
    id INT GENERATED ALWAYS AS IDENTITY,
