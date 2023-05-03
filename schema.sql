@@ -16,12 +16,14 @@ ALTER TABLE animals DROP column species;
 
 
 CREATE TABLE owners(
-    id SERIAL PRIMARY KEY,
+   id INT GENERATED ALWAYS AS IDENTITY,
     full_name VARCHAR,
     age INT
+    PRIMARY KEY(id)
 );
 
 CREATE TABLE species(
-    id SERIAL PRIMARY KEY,
+    id INT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR
+    PRIMARY KEY(id)
 );
