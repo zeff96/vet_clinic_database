@@ -68,16 +68,23 @@ WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
 GROUP BY species;
 
 SELECT animals.name FROM animals
-INNER JOIN owners ON
-animals.owner_id = owners.id
+INNER JOIN owners 
+ON animals.owner_id = owners.id
 WHERE owners.full_name = 'Melody Pond';
 
 SELECT * FROM animals
-INNER JOIN species ON
-animals.species_id = species.id
+INNER JOIN species 
+ON animals.species_id = species.id
 WHERE species.name = 'Pokemon';
 
 SELECT species.name, COUNT(*) AS total_counts
-FROM animals INNER JOIN species
+FROM animals INNER JOIN species 
 ON animals.species_id = species.id
 GROUP BY species.name;
+
+SELECT animals.name FROM animals
+INNER JOIN species 
+ON animals.species_id = species.id
+INNER JOIN owners 
+ON animals.owner_id = owners.id
+WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
