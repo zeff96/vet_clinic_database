@@ -76,3 +76,8 @@ SELECT * FROM animals
 INNER JOIN species ON
 animals.species_id = species.id
 WHERE species.name = 'Pokemon';
+
+SELECT species.name, COUNT(*) AS total_counts
+FROM animals INNER JOIN species
+ON animals.species_id = species.id
+GROUP BY species.name;
