@@ -72,10 +72,13 @@ INNER JOIN owners
 ON animals.owner_id = owners.id
 WHERE owners.full_name = 'Melody Pond';
 
-SELECT * FROM animals
+SELECT animals.name FROM animals
 INNER JOIN species 
 ON animals.species_id = species.id
 WHERE species.name = 'Pokemon';
+
+SELECT owners.full_name, animals.name FROM owners 
+FULL JOIN animals ON animals.owner_id = owners.id;
 
 SELECT species.name, COUNT(*) AS total_counts
 FROM animals INNER JOIN species 
@@ -94,3 +97,9 @@ FROM animals
 INNER JOIN owners
 ON animals.owner_id = owners.id
 WHERE animals.escape_attempts < 0 AND owners.full_name = 'Dean Winchester';
+
+SELECT owners.full_name,  COUNT(*) AS highest_count
+FROM animals
+INNER JOIN owners
+ON animals.owner_id = owners.id
+GROUP BY owners.full_name;
