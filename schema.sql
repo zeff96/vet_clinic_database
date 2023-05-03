@@ -14,16 +14,20 @@ ALTER TABLE animals ADD species varchar(255);
 
 ALTER TABLE animals DROP column species;
 
+ALTER TABLE animals
+ADD species_id INT,
+ADD CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id);
+
 
 CREATE TABLE owners(
    id INT GENERATED ALWAYS AS IDENTITY,
     full_name VARCHAR,
-    age INT
+    age INT,
     PRIMARY KEY(id)
 );
 
 CREATE TABLE species(
     id INT GENERATED ALWAYS AS IDENTITY,
-    name VARCHAR
+    name VARCHAR,
     PRIMARY KEY(id)
 );
