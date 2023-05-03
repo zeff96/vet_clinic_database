@@ -1,13 +1,15 @@
 /* Database schema to keep the structure of entire database. */
 
 CREATE TABLE animals(
-    id SERIAL PRIMARY KEY,
+    id INT GENERATED ALWAYS AS IDENTITY,
     name varchar,
     date_of_birth date,
     escape_attempts integer,
     neutered boolean,
     weight_kg decimal,
+    PRIMARY KEY(id)
 );
+
 ALTER TABLE animals ADD species varchar(255);
 
 ALTER TABLE animals DROP column species;
