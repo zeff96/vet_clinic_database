@@ -10,6 +10,8 @@ CREATE TABLE animals(
 );
 ALTER TABLE animals ADD species varchar(255);
 
+ALTER TABLE animals DROP column species;
+
 
 CREATE TABLE owners(
     id SERIAL PRIMARY KEY,
