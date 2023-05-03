@@ -96,7 +96,7 @@ SELECT animals.name, animals.escape_attempts
 FROM animals
 INNER JOIN owners
 ON animals.owner_id = owners.id
-WHERE animals.escape_attempts < 0 AND owners.full_name = 'Dean Winchester';
+WHERE animals.escape_attempts = 0 AND owners.full_name = 'Dean Winchester';
 
 SELECT owners.full_name,  COUNT(*) AS highest_count
 FROM animals
