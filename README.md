@@ -29,20 +29,6 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
@@ -54,12 +40,6 @@
 - **[Name column for the animals]**
 - **[animals date_of_birth]**
 - **[animals weight_kg]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,14 +89,6 @@ To run tests, run the following command:
   bin/rails test test/models/article_test.rb
 ```
 
-### Deployment
-
-You can deploy this project using:
-
-```sh
-
-```
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -141,6 +113,12 @@ You can deploy this project using:
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/zeff96/vet_clinic/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Support <a name = "support"></a>
+
+Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
