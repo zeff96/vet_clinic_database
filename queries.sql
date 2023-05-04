@@ -124,3 +124,10 @@ FROM specializations AS s
 FULL JOIN vets AS v ON s.vet_id = v.id
 FULL JOIN species AS sp ON s.species_id = sp.id
 GROUP by v.name, sp.name;
+
+SELECT a.name AS all_animals, vis.date_of_visit AS visit_date
+FROM visits AS vis
+JOIN animals AS a ON vis.animals_id = a.id
+JOIN vets AS v ON vis.vets_id = v.id
+WHERE v.name = 'Stephanie Mendez' AND vis.date_of_visit BETWEEN DATE '2020-04-01' AND '2020-08-30'
+GROUP BY a.name, vis.date_of_visit;
