@@ -54,5 +54,9 @@ INSERT INTO vets(name, age, date_of_graduation) VALUES ('Jack Harkness', 38, TO_
 
 /* Specialization table data */
 
-INSERT INTO specializations(species_id, vet_id)
-VALUES((SELECT id FROM species WHERE name = 'Pokemon'), (SELECT id FROM vets WHERE name = 'William Tatcher'));
+INSERT INTO specializations (species_id, vet_id)
+SELECT id, (SELECT id FROM vets WHERE name = 'William Tatcher') FROM species WHERE name = 'Pokemon'
+UNION ALL
+SELECT id, (SELECT id FROM vets WHERE name = 'Stephanie Mendez') FROM species WHERE name IN ('Digimon', 'Pokemon')
+UNION ALL
+SELECT id, (SELECT id FROM vets WHERE name = 'Jack Harkness') FROM species WHERE name = 'Digimon';
