@@ -34,3 +34,11 @@ CREATE TABLE species(
     name VARCHAR,
     PRIMARY KEY(id)
 );
+
+CREATE TABLE vets(
+    id INT AUTO_INCREMENT,
+    name VARCHAR(255),
+    age INT,
+    date_of_graduation DATE,
+    PRIMARY KEY(id)
+);
