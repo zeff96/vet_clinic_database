@@ -49,4 +49,5 @@ END;
 
 INSERT INTO vets(name, age, date_of_graduation) VALUES ('William Tatcher', 45, TO_DATE('Apr 23rd, 2000', 'Mon DDth YYYY'));
 INSERT INTO vets(name, age, date_of_graduation) VALUES ('Maisy Smith', 26, TO_DATE('Jan 17th, 2019', 'Mon DDth YYYY'));
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, TO_DATE('May 4th, 1981', 'Mon DDth YYYY'));
 
