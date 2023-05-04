@@ -103,3 +103,18 @@ FROM animals
 INNER JOIN owners
 ON animals.owner_id = owners.id
 GROUP BY owners.full_name;
+
+SELECT animals.name, vets.name, MAX(date_of_visit) AS last_vist
+FROM visits
+JOIN animals ON visits.animals_id = animals.id
+JOIN vets ON visits.vets_id = vets.id
+WHERE vets.name = 'William Tatcher'
+GROUP by animals.name, vets.name
+ORDER BY last_vist DESC
+LIMIT 1;
+
+SELECT a.name AS animals_name FROM visits AS vis
+JOIN animals AS a ON vis.animals_id = a.id
+JOIN vets AS v ON vis.vets_id = v.id
+WHERE v.name = 'Stephanie Mendez'
+GROUP BY a.name;
