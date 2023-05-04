@@ -54,11 +54,11 @@ INSERT INTO vets(name, age, date_of_graduation) VALUES ('Jack Harkness', 38, TO_
 
 /* Specialization table */
 
-CREATE TABLE pecialization(
+CREATE TABLE specialization(
   id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-  species_id INT,
+  specie_id INT,
   vet_id INT,
-  FOREIGN KEY(species_id) REFERENCES species(id),
+  FOREIGN KEY(specie_id) REFERENCES species(id),
   FOREIGN KEY(vet_id) REFERENCES vets(id)
 );
 
