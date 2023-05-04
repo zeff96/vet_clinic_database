@@ -45,3 +45,8 @@ WHEN name LIKE '%mon%' THEN (SELECT id FROM species WHERE name = 'Digimon')
 ELSE(SELECT id FROM species WHERE name = 'Pokemon')
 END;
 
+/* Vets table data */
+
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('William Tatcher', 45, TO_DATE('Apr 23rd, 2000', 'Mon DDth YYYY'));
+
+
