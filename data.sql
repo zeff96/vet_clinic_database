@@ -85,4 +85,4 @@ VALUES
   ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('Feb 27th, 2020', 'Mon DDth YYYY')),
   ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('Aug 3rd, 2020', 'Mon DDth YYYY')),
   ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('May 24th, 2020', 'Mon DDth YYYY')),
-  ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'William Tatche'), TO_DATE('Jan 11th, 2021', 'Mon DDth YYYY'));
+  ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'William Tatcher'), TO_DATE('Jan 11th, 2021', 'Mon DDth YYYY'));
