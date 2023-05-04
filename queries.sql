@@ -148,3 +148,29 @@ WHERE v.name = 'Maisy Smith'
 GROUP BY a.name
 ORDER by visit_date
 LIMIT 1;
+
+SELECT *
+FROM visits AS vis
+JOIN animals AS a ON vis.animals_id = a.id
+JOIN vets AS v ON vis.vets_id = v.id
+ORDER BY vis.date_of_visit DESC
+LIMIT 1;
+
+SELECT COUNT(*)
+FROM visits JOIN
+(SELECT vets.id
+FROM vets
+FULL JOIN specializations ON vets.id = specializations.vet_id
+FULL JOIN species ON species.id = specializations.species_id
+WHERE specializations.species_id IS NULL) AS vet 
+ON vet.id = visits.vets_id;
+
+SELECT s.name AS species_name, COUNT(vis.date_of_visit) AS total_visits
+FROM visits AS vis
+JOIN animals AS a ON vis.animals_id = a.id
+JOIN species AS s ON a.species_id = s.id
+JOIN vets AS v ON vis.vets_id = v.id
+WHERE v.name = 'Maisy Smith'
+GROUP BY s.name
+ORDER BY total_visits DESC
+LIMIT 1;
