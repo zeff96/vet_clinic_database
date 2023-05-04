@@ -118,3 +118,9 @@ JOIN animals AS a ON vis.animals_id = a.id
 JOIN vets AS v ON vis.vets_id = v.id
 WHERE v.name = 'Stephanie Mendez'
 GROUP BY a.name;
+
+SELECT v.name AS all_vets, sp.name AS species_name 
+FROM specializations AS s
+FULL JOIN vets AS v ON s.vet_id = v.id
+FULL JOIN species AS sp ON s.species_id = sp.id
+GROUP by v.name, sp.name;
