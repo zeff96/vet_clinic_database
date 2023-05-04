@@ -36,7 +36,7 @@ CREATE TABLE species(
 );
 
 CREATE TABLE vets(
-    id INT AUTO_INCREMENT,
+    id INT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(255),
     age INT,
     date_of_graduation DATE,
