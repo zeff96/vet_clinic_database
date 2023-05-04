@@ -52,13 +52,7 @@ INSERT INTO vets(name, age, date_of_graduation) VALUES ('Maisy Smith', 26, TO_DA
 INSERT INTO vets(name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, TO_DATE('May 4th, 1981', 'Mon DDth YYYY'));
 INSERT INTO vets(name, age, date_of_graduation) VALUES ('Jack Harkness', 38, TO_DATE('Jun 8th, 2008', 'Mon DDth YYYY'));
 
-/* Specialization table */
+/* Specialization table data */
 
-CREATE TABLE specialization(
-  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-  specie_id INT,
-  vet_id INT,
-  FOREIGN KEY(specie_id) REFERENCES species(id),
-  FOREIGN KEY(vet_id) REFERENCES vets(id)
-);
-
+INSERT INTO specializations(species_id, vet_id)
+VALUES((SELECT id FROM species WHERE name = 'Pokemon'), (SELECT id FROM vets WHERE name = 'William Tatcher'));
