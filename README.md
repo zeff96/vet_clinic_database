@@ -93,7 +93,7 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Adeka Zeffs**
 
 - GitHub: [@zeff96](https://github.com/zeff96)
 - LinkedIn: [zeff-adeka](https://www.linkedin.com/in/zeff-adeka/)

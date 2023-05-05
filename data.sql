@@ -45,3 +45,44 @@ WHEN name LIKE '%mon%' THEN (SELECT id FROM species WHERE name = 'Digimon')
 ELSE(SELECT id FROM species WHERE name = 'Pokemon')
 END;
 
+/* Vets table data */
+
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('William Tatcher', 45, TO_DATE('Apr 23rd, 2000', 'Mon DDth YYYY'));
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('Maisy Smith', 26, TO_DATE('Jan 17th, 2019', 'Mon DDth YYYY'));
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, TO_DATE('May 4th, 1981', 'Mon DDth YYYY'));
+INSERT INTO vets(name, age, date_of_graduation) VALUES ('Jack Harkness', 38, TO_DATE('Jun 8th, 2008', 'Mon DDth YYYY'));
+
+/* Specialization table data */
+
+INSERT INTO specializations (species_id, vet_id)
+SELECT id, (SELECT id FROM vets WHERE name = 'William Tatcher') FROM species WHERE name = 'Pokemon'
+UNION ALL
+SELECT id, (SELECT id FROM vets WHERE name = 'Stephanie Mendez') FROM species WHERE name IN ('Digimon', 'Pokemon')
+UNION ALL
+SELECT id, (SELECT id FROM vets WHERE name = 'Jack Harkness') FROM species WHERE name = 'Digimon';
+
+
+/* Visits table data */
+
+INSERT INTO visits(animals_id, vets_id, date_of_visit)
+VALUES
+  ((SELECT id FROM animals WHERE name = 'Agumon'), (SELECT id FROM vets WHERE name = 'William Tatcher'), TO_DATE('May 24th, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Agumon'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('Jul 22th, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Gabumon'), (SELECT id FROM vets WHERE name = 'Jack Harkness'), TO_DATE('Feb 2nd, 2021', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Pikachu'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('Jan 5th, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Pikachu'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('Mar 8th, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Pikachu'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('May 14th,2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Devimon'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('May 4th, 2021', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Charmander'), (SELECT id FROM vets WHERE name = 'Jack Harkness'), TO_DATE('Feb 24th, 2021', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('Dec 21st, 2019', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'William Tatcher'), TO_DATE('Aug 10th, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('Apr 7th, 2021', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Squirtle'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('Sep 29th, 2019', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Angemon'), (SELECT id FROM vets WHERE name = 'Jack Harkness'), TO_DATE('Oct 3rd, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Angemon'), (SELECT id FROM vets WHERE name = 'Jack Harkness'), TO_DATE('Nov 4th, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('Jan 24th, 2019', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('May 15th, 2019', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('Feb 27th, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), TO_DATE('Aug 3rd, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), TO_DATE('May 24th, 2020', 'Mon DDth YYYY')),
+  ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'William Tatcher'), TO_DATE('Jan 11th, 2021', 'Mon DDth YYYY'));
