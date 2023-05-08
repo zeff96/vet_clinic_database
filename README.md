@@ -98,13 +98,18 @@ To run tests, run the following command:
 - GitHub: [@zeff96](https://github.com/zeff96)
 - LinkedIn: [zeff-adeka](https://www.linkedin.com/in/zeff-adeka/)
 
+👤 **Oussama Elabdioui**
+
+- GitHub: [@codedit334](https://github.com/codedit334)
+- Twitter: [@oussedit](https://twitter.com/oussedit)
+- LinkedIn: [Oussama Elabdioui](https://www.linkedin.com/in/oussama-elabdioui-4677a41b6/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[add clinic employess data]**
-- [ ] **[add visits data]**
-- [ ] **[add animals' orners data]**
+- [ ] **[Appointment scheduling.]**
+- [ ] **[Medication tracking.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

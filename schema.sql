@@ -29,6 +29,13 @@ CREATE TABLE owners(
     PRIMARY KEY(id)
 );
 
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Create INDEX for email column
+CREATE INDEX email_asc ON owners(email ASC);
+
+
 CREATE TABLE species(
     id INT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR,
@@ -60,3 +67,6 @@ CREATE TABLE visits(
     FOREIGN KEY(animals_id) REFERENCES animals(id),
     FOREIGN KEY(vets_id) REFERENCES vets(id)
 );
+
+CREATE INDEX animals_id_asc ON visits(animals_id ASC);
+CREATE INDEX vets_id_desc ON visits(vets_id DESC);
