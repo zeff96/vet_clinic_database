@@ -28,6 +28,8 @@ CREATE TABLE owners(
     age INT,
     PRIMARY KEY(id)
 );
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 CREATE TABLE species(
     id INT GENERATED ALWAYS AS IDENTITY,
